@@ -121,3 +121,44 @@ for (i in seq_along(tree_height)) {
   val <- tree_height [i] + tree_height [i +1]
   print(val)
 }
+
+# create a vector of animals
+animal <- c("cat", "dog", "zebra", "dog")
+
+
+for (i in seq_along(animal)) {
+  if (animal[i] == "dog"){
+    print ("I love dogs!")
+  } else {
+    print ("These are not dogs")
+  }
+}
+
+# another for loop example w/ conditionals
+
+#animal species
+species <- c("dog", "elephant", "goat", "dog", "elephant")
+
+age_human <- c(3, 8, 4, 6, 12, 18)
+# 1 hm_yr = 7 dog, .88 elephant, 4.7 goat
+
+# allocate space for our output
+animal_ages <- vector(mode = "numeric", length = length(species))
+for(i in seq_along(species)) {
+  if(species[i] == "dog") {
+    animal_age <- age_human[i] * 7
+  } else if (species[i] == "elephant") {
+    animal_age <- age_human[i] * .88
+  } else if (species[i] == "goat") {
+    animal_age <- age_human[i] * 4.7
+  }  
+  animal_ages [i] <- animal_age
+} 
+
+# another example of storing an output
+big_cats <- vector (mode = "numeric", length = length(tigers))
+
+for(i in seq_along(tigers)){
+  total_cats[i] <- tigers[i] + lions[i]
+}
+
